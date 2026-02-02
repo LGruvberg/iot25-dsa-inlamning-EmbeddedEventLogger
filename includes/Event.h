@@ -2,6 +2,7 @@
 
 typedef enum {
     EVENT_SENSOR_READING,
+    
     EVENT_SYSTEM
 } EventType;
 
