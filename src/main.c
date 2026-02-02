@@ -67,7 +67,9 @@ int main(void) {
         }
         case 3: { // Sort <algorithm>
             char sort_name[20];
-            printf("Enter sort algorithm (available: 'insertion' OR 'selection' available):\t");
+
+            event_sort_print_available();
+            printf("Enter sort algorithm:\t");
             scanf("%19s", sort_name);
 
             EventSortFn sort_fn = event_sort_get(sort_name);

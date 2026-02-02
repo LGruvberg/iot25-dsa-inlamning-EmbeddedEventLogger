@@ -1,6 +1,7 @@
 #include "../includes/EventSort.h"
 #include <assert.h>
 #include <string.h>
+#include <stdio.h>
 
 void event_sort_insertion(EventLog *log) {
     assert(log != NULL);
@@ -37,19 +38,37 @@ void event_sort_selection(EventLog *log) {
         }
     }
 }
+//  Sort registry
+typedef struct {
+    const char *name;
+    EventSortFn fn;
+} EventSortEntry;
+
+static EventSortEntry SORTS[] = {
+    { "insertion", event_sort_insertion },
+    { "selection", event_sort_selection }
+};
+
+static const int SORT_COUNT = sizeof(SORTS) / sizeof(SORTS[0]);
 
 //  Map string -> sorting strategy
 EventSortFn event_sort_get(const char *name) {
-    if (name == NULL) {
-        return NULL;
-    }
+    if (!name) return NULL;
 
-    if (strcmp(name, "insertion") == 0) {   // strcmp -> the string pointed to by name is exactly the same as "insertion"
-        return event_sort_insertion;
-    } 
-    if (strcmp(name, "selection") == 0) {
-        return event_sort_selection;
+    for (int i = 0; i < SORT_COUNT; i++) {
+        if (strcmp(SORTS[i].name, name) == 0) { // NTS: strcmp returns 0 when two strings have identical contents (match algorithm name)
+            return SORTS[i].fn;
+        }
     }
 
     return NULL;
+}
+
+void event_sort_print_available(void) {
+    printf("\nAvailable sort algorithms:\t");
+    for (int i = 0; i < SORT_COUNT; i++) {
+        printf("'%s'%s", SORTS[i].name,
+               (i < SORT_COUNT - 1) ? ", " : "");
+    }
+    printf("\n");
 }
