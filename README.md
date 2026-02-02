@@ -42,3 +42,22 @@ Main components:
 -   The event generation is deterministic, so you'll get the same behavior each time you run it with the same inputs. 
     -   I thought about adding randomization to make the results look more interesting (e.g. after sorting), but keeping it deterministic made testing easier.
 -   Each data structure handles its own memory allocation/cleanup.
+
+### Example run
+**Tick**
+<img width="576" height="326" alt="image" src="https://github.com/user-attachments/assets/e0d76f0d-2b5a-4448-b47b-322a386cd68a" />
+Selecting menu option 1
+    Entering number of ticks (5)
+    _5 Ticks have been executed_
+To see them, select menu option 2, 
+    Print log
+<img width="443" height="443" alt="image" src="https://github.com/user-attachments/assets/0c097dbc-6f32-40c1-bd2d-325f4d243842" />
+Select menu option 3
+    Sort log
+        input: 'selection'
+<img width="645" height="294" alt="image" src="https://github.com/user-attachments/assets/c59eb2ca-2bc3-47bf-b72e-afc9edd0415b" />
+_Sorting using selection sort_
+Selecting menu option 4
+    Find sensor ID 3
+    <img width="469" height="574" alt="image" src="https://github.com/user-attachments/assets/d9862e3d-190b-4deb-b89b-5e5dd76e6e2c" />
+
