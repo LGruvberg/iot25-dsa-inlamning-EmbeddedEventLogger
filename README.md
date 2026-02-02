@@ -1,8 +1,13 @@
 # iot25-dsa-inlamning-EmbeddedEventLogger
 This repo contains code solutions for assignment in the course *Algorithms, Data Structures and Design Patterns*.
 
+**REPORT:**
+[love-gruvberg-iot25-dsa-inlamning-EmbeddedEventLogger-report](https://docs.google.com/document/d/12YaVIcAoNuyYWEqmsAa9NEmTgvA1Xeg6tlWy48Y859k/edit?usp=sharing)
+
 **GitHub repo:**
 [iot25-dsa-inlamning-EmbeddedEventLogger](https://github.com/LGruvberg/iot25-dsa-inlamning-EmbeddedEventLogger.git)
+
+---
 
 ## Compile instructions
 
@@ -43,21 +48,28 @@ Main components:
     -   I thought about adding randomization to make the results look more interesting (e.g. after sorting), but keeping it deterministic made testing easier.
 -   Each data structure handles its own memory allocation/cleanup.
 
-### Example run
-**Tick**
-<img width="576" height="326" alt="image" src="https://github.com/user-attachments/assets/e0d76f0d-2b5a-4448-b47b-322a386cd68a" />
-Selecting menu option 1
-    Entering number of ticks (5)
-    _5 Ticks have been executed_
-To see them, select menu option 2, 
-    Print log
-<img width="443" height="443" alt="image" src="https://github.com/user-attachments/assets/0c097dbc-6f32-40c1-bd2d-325f4d243842" />
-Select menu option 3
-    Sort log
-        input: 'selection'
-<img width="645" height="294" alt="image" src="https://github.com/user-attachments/assets/c59eb2ca-2bc3-47bf-b72e-afc9edd0415b" />
-_Sorting using selection sort_
-Selecting menu option 4
-    Find sensor ID 3
-    <img width="469" height="574" alt="image" src="https://github.com/user-attachments/assets/d9862e3d-190b-4deb-b89b-5e5dd76e6e2c" />
+---
 
+### Example run
+
+To create an event, select menu option 1, **Tick <n>**
+    Enter number of ticks: **5**
+
+<img width="576" height="326" alt="image" src="https://github.com/user-attachments/assets/e0d76f0d-2b5a-4448-b47b-322a386cd68a" />
+
+    *5 Ticks have been executed*
+
+To see them, select menu option 2, **Print log**
+
+<img width="443" height="443" alt="image" src="https://github.com/user-attachments/assets/0c097dbc-6f32-40c1-bd2d-325f4d243842" />
+
+To sort log, select menu option 3, **Sort log using <algorithm>**
+Input: **'selection'**
+*Sorting using selection sort*
+
+<img width="645" height="294" alt="image" src="https://github.com/user-attachments/assets/c59eb2ca-2bc3-47bf-b72e-afc9edd0415b" />
+
+To search by sensor ID, select menu option 4, **Find sensor ID** 
+input: **3**
+
+<img width="469" height="574" alt="image" src="https://github.com/user-attachments/assets/d9862e3d-190b-4deb-b89b-5e5dd76e6e2c" />
