@@ -1,10 +1,10 @@
 // [Producer] -> EventQueue -> [Consumer] -> EventLog -> EventSort -> Print
-#include <stdio.h>
 #include "../includes/Event.h"
 #include "../includes/EventLog.h"
 #include "../includes/EventQueue.h"
 #include "../includes/EventSort.h"
 #include "../includes/EventSearch.h"
+#include <stdio.h>
 
 static Event generate_event(int tick, int offset) { // deterministic cycling makes behavior easier to test and reason about (instead of random values)
     Event e;

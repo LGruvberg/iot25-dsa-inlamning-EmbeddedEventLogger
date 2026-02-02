@@ -1,7 +1,7 @@
+#include "../includes/EventLog.h"
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "../includes/EventLog.h"
 
 void event_log_init(EventLog *log, int initial_capacity) {
     assert(log != NULL);

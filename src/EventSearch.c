@@ -1,6 +1,6 @@
+#include "../includes/EventSearch.h"
 #include <stdio.h>
 #include <assert.h>
-#include "../includes/EventSearch.h"
 
 void event_log_search_by_sensor(const EventLog *log, int sensorId) {
     assert(log != NULL);

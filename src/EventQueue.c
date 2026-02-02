@@ -1,6 +1,6 @@
+#include "../includes/EventQueue.h"
 #include <stdlib.h>
 #include <assert.h>
-#include "../includes/EventQueue.h"
 
 void event_queue_init(EventQueue *queue, int capacity) {
     assert(queue != NULL);
