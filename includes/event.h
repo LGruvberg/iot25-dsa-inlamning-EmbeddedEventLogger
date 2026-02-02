@@ -1,5 +1,4 @@
-#ifndef EVENT_H
-#define EVENT_H
+#pragma once
 
 typedef enum {
     EVENT_SENSOR_READING,
@@ -8,11 +7,8 @@ typedef enum {
 } EventType;
 
 typedef struct {
-    int timestamp; 
-    // OBS: Timestamp ska vara stigande när events skapas (till exempel genom en global räknare som ökar med 1 för varje nytt event).
+    int timestamp;
     int sensorId;
     EventType type;
     int value;
 } Event;
-
-#endif  // EVENT_H

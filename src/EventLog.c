@@ -33,13 +33,12 @@ int event_log_add(EventLog *log, Event event) {
 
         if (new_events == NULL) {
             return 0;   // if allocation failed
-            }
+        }
+        
             log->events = new_events;
             log->capacity = new_capacity;
         }
-        // log->events[log->size] = event;
         log->events[log->size++] = event;
-        // log->size++;
 
         return 1;
 }
@@ -73,5 +72,25 @@ void event_log_print(const EventLog *log) {
             log->events[i].type,
             log->events[i].value
         );
+    }
+}
+
+void event_log_find_by_sensor(const EventLog *log, int sensorId) {
+    assert(log != NULL);
+
+    int found = 0;
+    for (int i = 0; i < log->size; i++) {
+        if (log->events[i].sensorId == sensorId) {
+            printf("Time: %d Sensor: %d Type: %d Value: %d\n",
+            log->events[i].timestamp,
+            log->events[i].sensorId,
+            log->events[i].type,
+            log->events[i].value
+        );
+        found = 1;
+    }
+}
+    if (!found) {
+        printf("No events found for sensor %d\n", sensorId);
     }
 }
