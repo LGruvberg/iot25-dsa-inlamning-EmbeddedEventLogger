@@ -1,9 +1,7 @@
 #pragma once
 #include "Event.h"
 
-/*
-EventQueue
-Fixed-size FIFO-queue implemented as ring buffer*/
+//  FIFO-queue implemented as ring buffer
 typedef struct {
     Event *buffer;  // fixed-size array
     int capacity;   // max number of elements
